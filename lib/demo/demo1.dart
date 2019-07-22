@@ -28,10 +28,10 @@ class ListViewDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Hello, Flutter'),
-        elevation: 30.0,
-      ),
+      // appBar: AppBar(
+      //   title: Text('Hello, Flutter'),
+      //   elevation: 30.0,
+      // ),
       body: ListView.builder(
         itemCount: posts.length,
         itemBuilder: _listItemBuilder,

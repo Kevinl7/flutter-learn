@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import './demo/demo1.dart';
+import './demo/bottom_navgation_demo.dart';
+import './demo/basic_demo.dart';
 
 void main() {
   runApp(App());
@@ -13,12 +15,16 @@ class App extends StatelessWidget {
       home: Home(),
       theme: ThemeData(
         primarySwatch: Colors.yellow,
+        highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
+        splashColor: Colors.white70
       ),
     );
   }
 }
 
 class Home extends StatelessWidget {
+  
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -41,11 +47,13 @@ class Home extends StatelessWidget {
         ),
         body: TabBarView(
           children: <Widget>[
-            Icon(Icons.local_florist, size: 128, color: Colors.black12),
-            Icon(Icons.local_activity, size: 128, color: Colors.black12),
+            ListViewDemo(),
+            // Icon(Icons.local_activity, size: 128, color: Colors.black12),
+            BasicDemo(),
             Icon(Icons.directions_bike, size: 128, color: Colors.black12)
           ],
         ),
+        bottomNavigationBar: BottomNavigationBarDemo(),
       ),
       );
   }
