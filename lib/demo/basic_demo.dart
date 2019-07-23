@@ -26,9 +26,13 @@ class BasicDemo extends StatelessWidget {
             child: Icon(Icons.pool, size: 32, color: Colors.deepPurple,),
             padding: EdgeInsets.all(16.0),
             margin: EdgeInsets.all(16.0),
-            color: Color.fromRGBO(3, 54, 255, 1.0),
+           // color: Color.fromRGBO(3, 54, 255, 1.0),
             width: 90.0,
             height: 90.0,
+            decoration: BoxDecoration(
+              color: Color.fromRGBO(3, 54, 255, 1.0),
+              borderRadius: BorderRadius.circular(16.0)
+            ),
           )
         ],
       ),
