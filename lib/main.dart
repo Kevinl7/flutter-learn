@@ -4,6 +4,7 @@ import './demo/bottom_navgation_demo.dart';
 import './demo/basic_demo.dart';
 import './demo/view_demo.dart';
 import './demo/sliver.dart';
+import './demo/router_demo.dart';
 
 void main() {
   runApp(App());
@@ -15,7 +16,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter之旅',
       debugShowCheckedModeBanner: false,
-      home: SliverDemo(),
+      home: NavgationDemo(),
       theme: ThemeData(
         primarySwatch: Colors.yellow,
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
@@ -26,8 +27,6 @@ class App extends StatelessWidget {
 }
 
 class Home extends StatelessWidget {
-  
-
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
